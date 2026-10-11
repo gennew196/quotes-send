@@ -32,20 +32,14 @@ function App() {
 
   return (
     <main className="page-shell">
-      <header className="topbar">
-        <a className="wordmark" href="/" aria-label="Today's Quote home">
-          <span className="wordmark-mark" aria-hidden="true">Q</span>
-          <span>QUOTE / DAILY</span>
-        </a>
-        <span className="topbar-note">A MOMENT TO KEEP</span>
-      </header>
-
       <section className="quote-stage" aria-labelledby="page-title">
-        <div className="date-line">
-          <span className="date-dot" aria-hidden="true" />
-          <time>{today}</time>
+        <div className="stage-heading">
+          <h1 id="page-title">A thought for today.</h1>
+          <div className="date-line">
+            <span className="date-dot" aria-hidden="true" />
+            <time>{today}</time>
+          </div>
         </div>
-        <h1 id="page-title">A thought<br />for today.</h1>
 
         <div className={`quote-content quote-content-${status}`} aria-live="polite" aria-busy={status === 'loading'}>
           {status === 'loading' && <p className="status-message">Finding today's words<span className="loading-mark">...</span></p>}
