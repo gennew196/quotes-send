@@ -58,14 +58,7 @@ function App() {
           )}
         </div>
 
-        <div className="stage-index" aria-hidden="true"><span>01</span><span className="index-rule" /><span>01</span></div>
       </section>
-
-      <footer className="footer">
-        <span>WORDS FOR THE DAY</span>
-        <span className="footer-symbol" aria-hidden="true">✳</span>
-        <span>MAKE THEM COUNT</span>
-      </footer>
     </main>
   );
 }

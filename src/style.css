@@ -21,7 +21,6 @@
 
 body {
   min-width: 320px;
-  min-height: 100vh;
   margin: 0;
   background-color: var(--paper);
   background-image: linear-gradient(#183d3208 1px, transparent 1px), linear-gradient(90deg, #183d3208 1px, transparent 1px);
@@ -34,38 +33,23 @@ button, a { font: inherit; }
   display: flex;
   flex-direction: column;
   width: min(100% - 96px, 1440px);
-  min-height: 100svh;
   margin: 0 auto;
   animation: arrive 600ms ease-out both;
 }
 
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 68px;
-  border-top: 1px solid var(--line);
-  border-bottom: 0;
-}
-
-.footer, .date-line, .stage-index {
+.date-line {
   font-family: 'DM Mono', monospace;
   font-size: 10px;
   letter-spacing: 0;
 }
 
-.footer { color: var(--muted); }
-
 .quote-stage {
-  position: relative;
   display: flex;
-  flex: 1;
   flex-direction: column;
   justify-content: flex-start;
   width: min(100%, 1440px);
-  min-height: 620px;
   margin: 0 auto;
-  padding: 20px 6%;
+  padding: 20px 6% 0;
 }
 
 .date-line {
@@ -91,8 +75,6 @@ h1 {
   font-weight: 500;
   line-height: 1.15;
 }
-
-.quote-content { min-height: 150px; }
 
 blockquote { position: relative; margin: 0; padding-left: 38px; }
 
@@ -140,32 +122,17 @@ blockquote p {
 .error-message button:hover { color: var(--paper); background: var(--ink); }
 .error-message button:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 
-.stage-index {
-  position: absolute;
-  right: 0;
-  bottom: 80px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--muted);
-}
-
-.index-rule { width: 54px; height: 1px; background: var(--line); }
-.footer-symbol { color: var(--accent); font-size: 15px; }
-
 @keyframes arrive { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes reveal { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes pulse { 0% { width: 0; } 100% { width: 20px; } }
 
 @media (max-width: 700px) {
   .page-shell { width: calc(100% - 40px); }
-  .quote-stage { min-height: 560px; padding: 20px 4%; }
+  .quote-stage { padding: 20px 4% 0; }
   h1 { margin-bottom: 36px; font-size: 22px; }
   blockquote { padding-left: 28px; }
   blockquote p { font-size: 34px; }
   .quote-mark { font-size: 42px; }
-  .stage-index { right: 4%; bottom: 42px; }
-  .footer { min-height: 58px; font-size: 8px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
